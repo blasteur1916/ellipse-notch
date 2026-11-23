@@ -1,6 +1,6 @@
 # Ellipse
 
-> Ellipse est un Notch pour Windows 10 et 11 : une pilule noire en haut de l'écran qui s'ouvre au survol sur le Stash, un tiroir pour les fichiers du moment et les derniers téléchargements. Il échange aussi des fichiers avec un iPhone ou un Android sur le Wi-Fi, sans appli. Gratuit, open source (GPL-3.0), sans compte, sans serveur ni télémétrie.
+> Ellipse (en bêta publique) est un Notch pour Windows 10 et 11 : une pilule noire en haut de l'écran qui s'ouvre au survol sur le Stash, un tiroir pour les fichiers du moment et les derniers téléchargements. Il échange aussi des fichiers avec un iPhone ou un Android sur le Wi-Fi, sans appli. Gratuit, open source (GPL-3.0), sans compte, sans serveur ni télémétrie.
 
 ## Fonctionnalités
 

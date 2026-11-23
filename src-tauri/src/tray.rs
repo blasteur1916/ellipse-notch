@@ -17,7 +17,7 @@ pub fn install(app: &App) -> tauri::Result<()> {
     let menu = Menu::with_items(app, &[&autostart, &PredefinedMenuItem::separator(app)?, &quit])?;
 
     let mut tray = TrayIconBuilder::new()
-        .tooltip("Ellipse")
+        .tooltip("Ellipse (bêta)")
         .menu(&menu)
         .show_menu_on_left_click(true)
         .on_menu_event(move |app, event| match event.id().as_ref() {

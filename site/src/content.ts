@@ -10,6 +10,13 @@ export function faqs(lang: Lang): { q: string; a: string }[] {
   const tr = translate(lang);
   return [
     {
+      q: tr("Ellipse est en bêta : qu'est-ce que ça veut dire ?", "Ellipse is in beta: what does that mean?"),
+      a: tr(
+        "Toutes les fonctions décrites ici marchent, mais Ellipse est jeune : vous pouvez croiser des bugs, et certaines choses vont encore changer. Vos fichiers ne risquent rien : Ellipse ne supprime que les téléchargements pour lesquels vous avez activé un minuteur, et toujours vers la Corbeille. Un problème ? Signalez-le sur GitHub, chaque retour aide.",
+        "Every feature described here works, but Ellipse is young: you may run into bugs, and some things will still change. Your files are safe: Ellipse only deletes the downloads you set a timer on, and always to the Recycle Bin. A problem? Report it on GitHub, every bit of feedback helps.",
+      ),
+    },
+    {
       q: tr("Qu'est-ce qu'Ellipse ?", "What is Ellipse?"),
       a: tr(
         "Un Notch pour Windows : une petite pilule noire collée en haut de l'écran. Au survol, elle s'ouvre sur le Stash, un tiroir où vous gardez vos fichiers du moment et vos derniers téléchargements, avec leur aperçu. Elle échange aussi des fichiers avec votre téléphone, sur le Wi-Fi.",

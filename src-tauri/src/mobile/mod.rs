@@ -3,15 +3,14 @@
 //!
 //! - L'accès est protégé par un jeton aléatoire inclus dans l'URL du QR code.
 //!   Il est conservé d'un lancement à l'autre : un téléphone appairé le reste.
-//! - Transports : Wi-Fi local, ou câble USB sur Android (`adb reverse`, voir
-//!   `usb.rs`) ; dans les deux cas le téléphone parle le même protocole HTTP.
+//! - Le téléphone n'installe rien : le QR code ouvre une page web servie par
+//!   le PC, sur le Wi-Fi local.
 //! - PC → mobile : les fichiers « partagés » sont annoncés en WebSocket et
 //!   téléchargeables via `/files/{id}`.
 //! - Mobile → PC : la page envoie `drag_start` (ouvre le Notch) puis téléverse
 //!   le fichier sur `/upload` ; il atterrit dans le Stash.
 
 mod server;
-mod usb;
 
 use std::collections::HashMap;
 use std::fs;
@@ -25,7 +24,6 @@ use tauri::{AppHandle, Emitter, Manager, State};
 use tokio::sync::broadcast;
 
 pub use server::start;
-pub use usb::spawn_usb_bridge;
 
 const STATUS_EVENT: &str = "mobile://status";
 const TOKEN_FILE: &str = "pairing.json";

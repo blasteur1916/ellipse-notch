@@ -54,7 +54,6 @@ pub fn start(app: &AppHandle) {
                 "/manifest.webmanifest",
                 get(|| async { ([(header::CONTENT_TYPE, "application/manifest+json")], MANIFEST) }),
             )
-            .route("/ping", get(ping))
             .route("/ws", get(socket))
             .route("/upload", post(upload))
             .route("/files/{id}", get(download))
@@ -73,17 +72,6 @@ impl Auth {
     fn valid(&self, app: &AppHandle) -> bool {
         self.t == app.state::<Mobile>().token
     }
-}
-
-/// Permet à l'app mobile de retrouver son PC (scan du réseau, USB) : ne répond
-/// qu'avec le bon jeton, pour ne jamais se signaler à un appareil non appairé.
-async fn ping(State(app): State<AppHandle>, Query(auth): Query<Auth>) -> Response {
-    if !auth.valid(&app) {
-        return StatusCode::FORBIDDEN.into_response();
-    }
-    let name = std::env::var("COMPUTERNAME").unwrap_or_else(|_| "PC".into());
-    axum::Json(serde_json::json!({ "app": "ellipse", "name": name, "version": env!("CARGO_PKG_VERSION") }))
-        .into_response()
 }
 
 async fn socket(

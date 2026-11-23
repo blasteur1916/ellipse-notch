@@ -6,13 +6,6 @@ tsconfig.tsbuildinfo
 src-tauri/target
 src-tauri/gen
 
-# App mobile (Expo) : projets natifs générés
-mobile-app/android
-mobile-app/ios
-mobile-app/.expo
-.mb
-*.apk
-
 # Fichiers locaux
 .sixth
 Screen Studio*.html

@@ -42,7 +42,6 @@ pub fn run() {
             input::start(handle.clone());
             app.manage(mobile::Mobile::load(handle)?);
             mobile::start(handle);
-            mobile::spawn_usb_bridge(handle.clone());
 
             let window = app
                 .get_webview_window(notch::LABEL)

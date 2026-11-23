@@ -105,6 +105,7 @@ function Nav() {
         <a className="brand" href="#top" onClick={(e) => go(e, "#top")} aria-label={tr("Ellipse, accueil", "Ellipse, home")}>
           <Logo />
           <span>Ellipse</span>
+          <span className="beta-tag">{tr("bêta", "beta")}</span>
         </a>
         <nav className="nav-links" aria-label="Sections">
           {links.map((l) => (
@@ -156,7 +157,7 @@ function DownloadMenu() {
       <summary aria-label={tr("Télécharger pour Windows, ou choisir une autre plateforme", "Download for Windows, or pick another platform")}>
         <a className="download-main" href={DOWNLOAD} onClick={(e) => e.stopPropagation()}>
           <WindowsIcon />
-          {tr("Télécharger pour Windows", "Download for Windows")}
+          {tr("Télécharger la bêta", "Download the beta")}
         </a>
         <span className="download-chevron" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -197,6 +198,7 @@ function Hero({ scene, onScene }: { scene: SceneId; onScene(id: SceneId): void }
     <section className="hero" id="top">
       <div className="shell">
         <div className="hero-copy">
+          <p className="cta-badge hero-badge">{tr("Bêta publique · gratuite", "Public beta · free")}</p>
           <h1>{tr("Le Notch qui manquait à Windows", "The Notch Windows was missing")}</h1>
           <p>
             {tr(
@@ -485,8 +487,8 @@ function Cta() {
     <section className="cta-wrap" id="download">
       <div className="shell">
         <div className="cta reveal">
-          <div className="cta-badge">{tr("Natif, léger et gratuit", "Native, light and free")}</div>
-          <h2>{tr("Prêt à installer Ellipse ?", "Ready to install Ellipse?")}</h2>
+          <div className="cta-badge">{tr("Bêta gratuite · natif et léger", "Free beta · native and light")}</div>
+          <h2>{tr("Prêt à essayer Ellipse ?", "Ready to try Ellipse?")}</h2>
           <p>
             {tr(
               "Un installateur pour Windows 10 et 11, sans inscription. Le Notch apparaît en haut de l'écran dès le premier lancement.",

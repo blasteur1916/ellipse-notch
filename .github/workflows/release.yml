@@ -56,7 +56,7 @@ jobs:
         run: |
           version="${GITHUB_REF_NAME#v}"
           {
-            echo "Installateur pour Windows 10 et 11 (64 bits)."
+            echo "**Bêta publique.** Installateur pour Windows 10 et 11 (64 bits). Des bugs restent possibles : signalez-les dans les issues."
             echo
             echo "Windows peut afficher « Windows a protégé votre ordinateur » : cliquez sur « Informations complémentaires », puis « Exécuter quand même ». Cet installateur est compilé par GitHub Actions à partir de ce commit ; son empreinte SHA-256 est jointe."
             echo
@@ -64,5 +64,5 @@ jobs:
             echo "[Site](https://blasteur1916.github.io/ellipse-notch/) · [Politique de compilation](https://blasteur1916.github.io/ellipse-notch/code-signing/) · [Confidentialité](https://blasteur1916.github.io/ellipse-notch/confidentialite/)"
           } > notes.md
           gh release create "$GITHUB_REF_NAME" Ellipse-Setup-x64.exe Ellipse-Setup-x64.exe.sha256 \
-            --title "Ellipse $version" \
+            --title "Ellipse $version (bêta)" \
             --notes-file notes.md
