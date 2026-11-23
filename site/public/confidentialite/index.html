@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confidentialité · Ellipse</title>
+    <meta name="description" content="Ce qu'Ellipse fait de vos fichiers et de vos données : tout reste sur votre PC et votre réseau local." />
+    <link rel="icon" href="../favicon-48.png" type="image/png" />
+    <link rel="stylesheet" href="../legal.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="../"><img src="../favicon-48.png" width="26" height="26" alt="" /><span>Ellipse</span></a>
+      <nav>
+        <a href="../guides/">Guides</a>
+        <a href="../en/privacy/" hreflang="en" lang="en">English</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Confidentialité</h1>
+      <p class="updated">Mise à jour : 23 novembre 2026</p>
+
+      <p>Ellipse fonctionne sur votre PC. Pas de compte, pas de publicité, pas de télémétrie : aucune statistique d'utilisation n'est envoyée, et Ellipse ne se connecte à aucun serveur sur Internet.</p>
+
+      <h2>Ce qui reste sur votre PC</h2>
+      <ul>
+        <li><strong>Le Stash</strong> : le chemin, le nom et la taille des fichiers que vous y ajoutez, et leur minuteur, enregistrés dans <code>%APPDATA%\app.ellipse.notch\stash.json</code>. Les fichiers eux-mêmes ne sont ni copiés ni déplacés.</li>
+        <li><strong>Le dossier Téléchargements</strong> : Ellipse surveille l'arrivée de nouveaux fichiers pour les afficher dans le Notch. Il ne lit pas leur contenu, sauf pour l'aperçu.</li>
+        <li><strong>Les aperçus</strong> : générés par Windows (comme dans l'Explorateur), ou à partir des premières lignes d'un fichier texte, et gardés en mémoire.</li>
+        <li><strong>La souris</strong> : pour détecter le geste « secouer », Ellipse suit la position de la souris pendant que vous maintenez le bouton gauche. Ces positions ne sont ni enregistrées ni envoyées.</li>
+        <li><strong>Les réglages</strong> et la clé d'appairage du téléphone, dans <code>%APPDATA%\app.ellipse.notch\</code>.</li>
+      </ul>
+
+      <h2>Ce qui passe par votre réseau local</h2>
+      <p>Pour échanger des fichiers avec votre téléphone, Ellipse ouvre un petit serveur sur votre réseau local (port 47821). Il ne répond qu'aux appareils qui présentent la clé contenue dans le QR code. Les fichiers vont directement du téléphone au PC et inversement, sans passer par Internet. Ils circulent en HTTP, non chiffré, sur votre réseau : utilisez cette fonction sur un Wi-Fi de confiance, pas sur un réseau public.</p>
+      <p>Les fichiers reçus du téléphone sont enregistrés dans <code>Téléchargements\Ellipse</code>.</p>
+
+      <h2>Ce site</h2>
+      <p>Le site n'utilise ni cookie ni outil de mesure d'audience. Votre choix de thème (clair ou sombre) est gardé dans votre navigateur. L'hébergeur, GitHub, voit l'adresse IP des visiteurs, comme pour toute page web (<a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement">politique de GitHub</a>).</p>
+
+      <h2>Vos droits</h2>
+      <p>Ellipse ne collectant aucune donnée vous concernant, il n'y a rien à consulter, rectifier ou effacer chez l'éditeur. Pour effacer les données locales, désinstallez Ellipse et supprimez le dossier <code>%APPDATA%\app.ellipse.notch</code>. Pour toute question, <a href="https://github.com/blasteur1916/ellipse-notch/issues">ouvrez une issue sur GitHub</a>.</p>
+    </main>
+    <footer>
+      <nav>
+        <a href="../mentions-legales/">Mentions légales</a>
+        <a href="../conditions-utilisation/">Conditions d'utilisation</a>
+        <a href="../confidentialite/">Confidentialité</a>
+        <a href="../code-signing/">Code signing</a>
+      </nav>
+      <span>© 2026 Ellipse · <a href="https://github.com/blasteur1916/ellipse-notch">GitHub</a></span>
+    </footer>
+  </body>
+</html>

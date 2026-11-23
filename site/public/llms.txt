@@ -1,0 +1,18 @@
+# Ellipse
+
+> Ellipse est un Notch pour Windows 10 et 11 : une pilule noire en haut de l'écran qui s'ouvre au survol sur le Stash, un tiroir pour les fichiers du moment et les derniers téléchargements. Il échange aussi des fichiers avec un iPhone ou un Android sur le Wi-Fi, sans appli. Gratuit, open source (GPL-3.0), sans compte, sans serveur ni télémétrie.
+
+## Fonctionnalités
+
+- Notch au repos (l'heure, 132 × 30 pixels), qui s'ouvre quand la souris touche le haut de l'écran et laisse passer les clics autour de lui.
+- Stash : fichiers ajoutés par l'utilisateur et derniers téléchargements, avec les miniatures de l'Explorateur (photos, PDF, vidéos, documents) ou les premières lignes des fichiers texte ; recherche par nom.
+- Glisser-déposer natif d'une carte du Stash vers n'importe quelle application Windows (mail, messagerie, dossier).
+- Ajout au Stash : glisser un fichier jusqu'en haut de l'écran, ou secouer la souris pendant le glisser (une orbe apparaît sous le curseur, il suffit de lâcher).
+- Téléchargements éphémères : chaque nouveau fichier du dossier Téléchargements s'annonce avec son aperçu ; minuteur de 5, 10, 30 ou 60 minutes, ou suppression après glisser ; toujours vers la Corbeille.
+- Téléphone : appairage unique par QR code, page web sur le téléphone (iPhone ou Android, sans appli) ; glisser une photo vers l'île en haut du téléphone l'envoie au PC ; déposer un fichier sur la zone Téléphone du Notch l'envoie au téléphone. Transferts directs sur le réseau local.
+- Lancement au démarrage de Windows, icône dans la zone de notification pour quitter.
+
+## Téléchargement
+
+- Installateur Windows : https://github.com/blasteur1916/ellipse-notch/releases/latest/download/Ellipse-Setup-x64.exe
+- Code source : https://github.com/blasteur1916/ellipse-notch

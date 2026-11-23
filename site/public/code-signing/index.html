@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Release and signing policy · Ellipse</title>
+    <meta name="description" content="How Ellipse's Windows installer is built and published, and how to check what you install." />
+    <link rel="icon" href="../favicon-48.png" type="image/png" />
+    <link rel="stylesheet" href="../legal.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="../en/"><img src="../favicon-48.png" width="26" height="26" alt="" /><span>Ellipse</span></a>
+      <nav>
+        <a href="../en/guides/">Guides</a>
+        
+      </nav>
+    </header>
+    <main>
+      <h1>Release and signing policy</h1>
+      <p class="updated">Updated: 23 November 2026</p>
+
+      <p>Ellipse's Windows installer is not signed with a code-signing certificate yet, so Windows SmartScreen may warn about it the first time. Here is how each release is built, and how you can check what you install.</p>
+
+      <h2>How releases are built</h2>
+      <p>The Windows installer of each release (<code>Ellipse-Setup-x64.exe</code>) is published on <a href="https://github.com/blasteur1916/ellipse-notch/releases">GitHub Releases</a>. Every installer is built by GitHub Actions from the tagged commit of the public repository, <a href="https://github.com/blasteur1916/ellipse-notch">blasteur1916/ellipse-notch</a>. Nothing built elsewhere is published.</p>
+
+      <h2>How to check what you install</h2>
+      <p>Each release carries <code>Ellipse-Setup-x64.exe.sha256</code>, the SHA-256 of its installer. In PowerShell, <code>Get-FileHash Ellipse-Setup-x64.exe</code> must print the same value.</p>
+
+      <h2>Team</h2>
+      <p>Committer, reviewer and approver: <a href="https://github.com/blasteur1916">blasteur1916</a>. Changes from other people come as pull requests, reviewed before they are merged.</p>
+
+      <h2>Privacy</h2>
+      <p>Ellipse has no account, no advertising and no telemetry, and connects to no Internet server. The full policy is on the <a href="../en/privacy/">privacy page</a>.</p>
+    </main>
+    <footer>
+      <nav>
+        <a href="../en/legal-notice/">Legal notice</a>
+        <a href="../en/terms/">Terms of use</a>
+        <a href="../en/privacy/">Privacy</a>
+        <a href="../code-signing/">Code signing</a>
+      </nav>
+      <span>© 2026 Ellipse · <a href="https://github.com/blasteur1916/ellipse-notch">GitHub</a></span>
+    </footer>
+  </body>
+</html>

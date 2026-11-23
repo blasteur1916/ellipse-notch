@@ -1,0 +1,14 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissions de la fenêtre Notch",
+  "windows": [
+    "notch",
+    "satellite"
+  ],
+  "permissions": [
+    "core:default",
+    "drag:default",
+    "autostart:default"
+  ]
+}

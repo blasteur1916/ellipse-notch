@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy · Ellipse</title>
+    <meta name="description" content="What Ellipse does with your files and data: everything stays on your PC and your local network." />
+    <link rel="icon" href="../../favicon-48.png" type="image/png" />
+    <link rel="stylesheet" href="../../legal.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="../../en/"><img src="../../favicon-48.png" width="26" height="26" alt="" /><span>Ellipse</span></a>
+      <nav>
+        <a href="../../en/guides/">Guides</a>
+        <a href="../../confidentialite/" hreflang="fr" lang="fr">Français</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Privacy</h1>
+      <p class="updated">Updated: 23 November 2026</p>
+
+      <p>Ellipse runs on your PC. No account, no advertising, no telemetry: no usage statistics are sent, and Ellipse doesn't connect to any server on the Internet.</p>
+
+      <h2>What stays on your PC</h2>
+      <ul>
+        <li><strong>The Stash</strong>: the path, name and size of the files you add to it, and their timer, saved in <code>%APPDATA%\app.ellipse.notch\stash.json</code>. The files themselves are neither copied nor moved.</li>
+        <li><strong>The Downloads folder</strong>: Ellipse watches for new files to show them in the Notch. It doesn't read their content, except for the preview.</li>
+        <li><strong>Previews</strong>: made by Windows (as in File Explorer), or from a text file's first lines, and kept in memory.</li>
+        <li><strong>The mouse</strong>: to detect the “shake” gesture, Ellipse follows the pointer's position while you hold the left button. These positions are neither saved nor sent.</li>
+        <li><strong>Settings</strong> and the phone's pairing key, in <code>%APPDATA%\app.ellipse.notch\</code>.</li>
+      </ul>
+
+      <h2>What goes over your local network</h2>
+      <p>To swap files with your phone, Ellipse opens a small server on your local network (port 47821). It only answers devices that present the key held in the QR code. Files go straight from the phone to the PC and back, without going through the Internet. They travel over HTTP, unencrypted, on your network: use this feature on a Wi-Fi you trust, not on a public network.</p>
+      <p>Files received from the phone are saved in <code>Downloads\Ellipse</code>.</p>
+
+      <h2>This website</h2>
+      <p>The website uses no cookies and no analytics. Your theme choice (light or dark) is kept in your browser. The host, GitHub, sees visitors' IP addresses, as for any web page (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's policy</a>).</p>
+
+      <h2>Your rights</h2>
+      <p>As Ellipse collects no data about you, there is nothing to access, correct or erase on the publisher's side. To erase the local data, uninstall Ellipse and delete the <code>%APPDATA%\app.ellipse.notch</code> folder. For any question, <a href="https://github.com/blasteur1916/ellipse-notch/issues">open an issue on GitHub</a>.</p>
+    </main>
+    <footer>
+      <nav>
+        <a href="../../en/legal-notice/">Legal notice</a>
+        <a href="../../en/terms/">Terms of use</a>
+        <a href="../../en/privacy/">Privacy</a>
+        <a href="../../code-signing/">Code signing</a>
+      </nav>
+      <span>© 2026 Ellipse · <a href="https://github.com/blasteur1916/ellipse-notch">GitHub</a></span>
+    </footer>
+  </body>
+</html>
